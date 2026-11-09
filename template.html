@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<title>SpendWarden — your agent can buy things. It can't surprise you.</title>
+<style>
+  @media (max-width:600px){
+    .wrap{width:100%!important}
+    .px{padding-left:22px!important;padding-right:22px!important}
+    .h1{font-size:30px!important;line-height:36px!important}
+    .feature{padding:16px!important}
+    .stack{display:block!important;width:100%!important}
+    .gap{height:12px!important}
+    .btn{width:100%!important}
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background:#070b0a;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">
+  A deterministic spend firewall for agents that can move money. Caps, allowlists, x402 inspection, and a local ledger.
+</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#070b0a;">
+<tr><td align="center" style="padding:28px 12px;">
+  <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#0d1412;border:1px solid #1f2b27;border-radius:18px;overflow:hidden;">
+    <tr>
+      <td class="px" style="padding:22px 34px 18px;border-bottom:1px solid #1a2521;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="font:700 18px/24px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#f4f7f6;letter-spacing:-.3px;">
+              Spend<span style="color:#6ee7b7;">Warden</span>
+            </td>
+            <td align="right" style="font:600 11px/16px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#8aa39a;text-transform:uppercase;letter-spacing:1.2px;">
+              for Hermes agents
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="px" style="padding:34px 34px 10px;">
+        <div style="font:600 11px/16px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#6ee7b7;text-transform:uppercase;letter-spacing:1.6px;margin-bottom:14px;">
+          A spend policy firewall
+        </div>
+        <h1 class="h1" style="margin:0 0 16px;font:800 38px/44px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#f4f7f6;letter-spacing:-1.2px;">
+          Your agent can buy things.<br><span style="color:#6ee7b7;">It can&rsquo;t surprise you.</span>
+        </h1>
+        <p style="margin:0 0 26px;font:400 16px/26px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#b8c7c1;">
+          SpendWarden checks every payment-shaped tool call before the wallet runs. Daily, monthly and per-call caps, recipient and asset allowlists, x402 inspection, and an idempotent local ledger &mdash; inside your Hermes agent.
+        </p>
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 8px;">
+          <tr>
+            <td style="border-radius:10px;background:#6ee7b7;">
+              <a class="btn" href="https://github.com/matrixneoaiagent/spendwarden" style="display:inline-block;padding:14px 22px;font:700 14px/20px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#07110c;text-decoration:none;border-radius:10px;">
+                Install SpendWarden &rarr;
+              </a>
+            </td>
+          </tr>
+        </table>
+        <p style="margin:8px 0 0;font:400 12px/18px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#6f857c;">
+          MIT licensed &middot; standard library only &middot; no keys, no signing, no network calls.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="px" style="padding:18px 34px 8px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="stack" width="48%" valign="top" style="background:#111b17;border:1px solid #1f2b27;border-radius:12px;padding:18px;">
+              <div style="font:700 13px/18px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#f4f7f6;margin-bottom:6px;">Caps that hold</div>
+              <div style="font:400 12px/19px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#9db0a8;">Per-call, daily and monthly USD limits, enforced before the tool executes.</div>
+            </td>
+            <td class="gap" width="4%">&nbsp;</td>
+            <td class="stack" width="48%" valign="top" style="background:#111b17;border:1px solid #1f2b27;border-radius:12px;padding:18px;">
+              <div style="font:700 13px/18px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#f4f7f6;margin-bottom:6px;">Allowlists</div>
+              <div style="font:400 12px/19px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#9db0a8;">Recipients, assets and networks. Anything unknown asks or blocks.</div>
+            </td>
+          </tr>
+          <tr><td height="12"></td><td></td><td></td></tr>
+          <tr>
+            <td class="stack" width="48%" valign="top" style="background:#111b17;border:1px solid #1f2b27;border-radius:12px;padding:18px;">
+              <div style="font:700 13px/18px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#f4f7f6;margin-bottom:6px;">x402 inspection</div>
+              <div style="font:400 12px/19px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#9db0a8;">Decode PAYMENT-REQUIRED and X-PAYMENT payloads without signing.</div>
+            </td>
+            <td class="gap" width="4%">&nbsp;</td>
+            <td class="stack" width="48%" valign="top" style="background:#111b17;border:1px solid #1f2b27;border-radius:12px;padding:18px;">
+              <div style="font:700 13px/18px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#f4f7f6;margin-bottom:6px;">Local ledger</div>
+              <div style="font:400 12px/19px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#9db0a8;">Every payment and decision in SQLite, with idempotent receipts.</div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="px" style="padding:22px 34px 12px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#07110c;border:1px solid #1f2b27;border-radius:12px;">
+          <tr>
+            <td style="padding:16px 18px;">
+              <div style="font:600 10px/14px 'SFMono-Regular',Consolas,monospace;color:#6f857c;letter-spacing:1px;margin-bottom:8px;">SPEND_CHECK</div>
+              <div style="font:400 12px/20px 'SFMono-Regular',Consolas,monospace;color:#b8c7c1;">
+                <span style="color:#6ee7b7;">allow</span> $0.25 USDC &middot; base &middot; 0x1111&hellip;1111<br>
+                <span style="color:#fca5a5;">block</span> $3.00 &mdash; over the $2.00 per-call cap<br>
+                <span style="color:#fcd34d;">ask</span> unknown recipient &mdash; approval gate
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="px" style="padding:18px 34px 34px;">
+        <p style="margin:0 0 12px;font:400 14px/23px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#b8c7c1;">
+          A prompt can be ignored, compressed, or overridden by a malicious tool result. SpendWarden is ordinary Python in a <span style="color:#f4f7f6;font-weight:600;">pre_tool_call</span> hook: a check that runs before the money moves.
+        </p>
+        <p style="margin:0;font:400 13px/21px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#8aa39a;">
+          Read the source and the 38-test suite:
+          <a href="https://github.com/matrixneoaiagent/spendwarden" style="color:#6ee7b7;text-decoration:none;">github.com/matrixneoaiagent/spendwarden</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="px" style="padding:20px 34px;border-top:1px solid #1a2521;background:#0a110e;">
+        <div style="font:400 11px/17px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#6f857c;">
+          Built by OpenCode Audit Agent &middot; MIT &middot; no keys, no signing, no telemetry.<br>
+          You are receiving this because you asked an agent to send a SpendWarden demo.
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div style="height:18px;"></div>
+  <div style="font:400 10px/16px -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#40514a;">
+    SpendWarden &middot; a spend policy firewall for Hermes agents
+  </div>
+</td></tr>
+</table>
+</body>
+</html>

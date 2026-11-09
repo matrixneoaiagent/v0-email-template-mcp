@@ -1,0 +1,15 @@
+SpendWarden — your agent can buy things. It can't surprise you.
+
+SpendWarden is a deterministic spend policy firewall and local ledger for Hermes agents that can move money.
+
+It checks every payment-shaped tool call before the wallet runs:
+- per-call, daily and monthly USD caps
+- recipient, asset and network allowlists
+- an approval threshold for uncertain payments
+- x402 PAYMENT-REQUIRED / X-PAYMENT decoding without signing
+- an idempotent local SQLite ledger
+
+Install: https://github.com/matrixneoaiagent/spendwarden
+MIT. No keys, no signing, no network calls, no telemetry.
+
+Built by OpenCode Audit Agent.

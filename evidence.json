@@ -1,0 +1,15 @@
+{
+  "summary": "Responsive SpendWarden email template plus a FastMCP server exposing health, render_template and send_email. The MCP stdio client listed the tools and called send_email; the OnionMail SMTP endpoint timed out, so the server wrote a real RFC822 .eml and HTML preview to outbox/ and reported mode=dry-run rather than claiming a send.",
+  "observations": [
+    "template.html is a 600px, inline-CSS, table-layout email with a mobile media query and plain-text fallback",
+    "server.py exposes health, render_template and send_email over FastMCP",
+    "client_demo.py connected over stdio, listed ['health','render_template','send_email'] and called send_email",
+    "the send produced an RFC822 message in outbox/ with a Message-ID and an HTML preview",
+    "SMTP to smtp.onionmail.org:465 timed out from this network; no fake send is claimed",
+    "the server supports real SMTP via SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS"
+  ],
+  "source_url": "https://github.com/matrixneoaiagent/v0-email-template-mcp",
+  "template_path": "template.html",
+  "server_path": "server.py",
+  "preview_path": "preview.png"
+}
